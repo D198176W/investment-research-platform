@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest ruff
+
+      - name: Lint (ruff)
+        run: |
+          ruff check backend/ evals/ tests/ frontend/ --select E9,F --ignore F401
+
+      - name: Compile check
+        run: |
+          python -m py_compile $(git ls-files '*.py')
+
+      - name: Unit tests
+        run: |
+          python -m pytest tests/ -q --tb=short
+
+      - name: Eval smoke test (规则校验，不调真实 LLM)
+        run: |
+          cd backend
+          python -c "
+          import sys; sys.path.insert(0, '.')
+          from evals.metrics import run_rule_checks
+          # 模拟一个完整通过的状态
+          mock_state = {
+              'current_phase': 'completed',
+              'reasoning_plans': [{'plan_id':'1','data_validation':{'confidence_change':0.1}},{'plan_id':'2','data_validation':{'confidence_change':0}}],
+              'final_report': '国产替代 算力 风险 回调 增长',
+              'reflection': {'passed': True},
+              'selected_plan': {'risk_assessment': '有风险应对'},
+              'perception_data': {'_agentic': {'succeeded_tools': ['get_market_overview','get_major_indices']}},
+              'world_model': {},
+          }
+          results = run_rule_checks(mock_state, {'min_plans':2,'must_mention':['国产替代','风险'],'direction_keywords':['增长'],'must_have_reflection':True,'must_have_risk':True,'min_tools_used':2})
+          passed = sum(1 for r in results if r.passed)
+          print(f'规则校验通过 {passed}/{len(results)}')
+          assert passed == len(results), '存在未通过的规则校验'
+          "

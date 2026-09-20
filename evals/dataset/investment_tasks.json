@@ -1,0 +1,302 @@
+[
+  {
+    "id": "eval-001",
+    "topic": "人工智能芯片市场",
+    "industry": "半导体",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["国产替代", "算力", "风险"],
+      "direction_keywords": ["上涨", "增长", "风险", "回调"],
+      "min_tools_used": 2,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "标准产业链任务：考察工具调用 + 风险覆盖"
+  },
+  {
+    "id": "eval-002",
+    "topic": "新能源汽车产业链",
+    "industry": "新能源",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["锂电池", "竞争", "风险"],
+      "direction_keywords": ["增长", "竞争", "风险"],
+      "min_tools_used": 2,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "事件+产业链混合：考察新闻工具与板块数据结合"
+  },
+  {
+    "id": "eval-003",
+    "topic": "创新药研发管线",
+    "industry": "生物医药",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["研发", "审批", "风险"],
+      "direction_keywords": ["风险", "审批", "增长"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "长周期任务：考察时间框架匹配与失败恢复"
+  },
+  {
+    "id": "eval-004",
+    "topic": "低空经济产业链",
+    "industry": "航空航天",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["政策", "风险"],
+      "direction_keywords": ["政策", "增长", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "政策驱动任务：考察宏观新闻工具使用"
+  },
+  {
+    "id": "eval-005",
+    "topic": "储能技术商业化",
+    "industry": "新能源",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["储能", "成本", "风险"],
+      "direction_keywords": ["增长", "成本", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "技术商业化任务：考察成本-需求逻辑链"
+  },
+  {
+    "id": "eval-006",
+    "topic": "人形机器人产业",
+    "industry": "智能制造",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["量产", "风险"],
+      "direction_keywords": ["增长", "量产", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "前沿产业任务：考察远期预期与风险平衡"
+  },
+  {
+    "id": "eval-007",
+    "topic": "半导体设备国产化",
+    "industry": "半导体",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["国产", "风险"],
+      "direction_keywords": ["替代", "增长", "风险"],
+      "min_tools_used": 2,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "国产替代任务：考察板块行情工具调用"
+  },
+  {
+    "id": "eval-008",
+    "topic": "跨境电商出海机遇",
+    "industry": "互联网",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["出海", "风险"],
+      "direction_keywords": ["增长", "竞争", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "消费互联网任务：考察新闻舆情工具"
+  },
+  {
+    "id": "eval-009",
+    "topic": "消费级AR/VR市场",
+    "industry": "消费电子",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["出货量", "风险"],
+      "direction_keywords": ["增长", "风险", "竞争"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "消费电子任务：考察硬件周期判断"
+  },
+  {
+    "id": "eval-010",
+    "topic": "金融科技监管趋势",
+    "industry": "金融科技",
+    "horizon": "短期(1-3个月)",
+    "expected": {
+      "must_mention": ["监管", "风险"],
+      "direction_keywords": ["监管", "风险", "合规"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "监管事件任务：考察短期政策敏感性"
+  },
+  {
+    "id": "eval-011",
+    "topic": "碳中和绿色投资",
+    "industry": "新能源",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["碳", "风险"],
+      "direction_keywords": ["政策", "增长", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "ESG主题任务：考察长逻辑与政策风险"
+  },
+  {
+    "id": "eval-012",
+    "topic": "量子计算商用化",
+    "industry": "半导体",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["量子", "风险"],
+      "direction_keywords": ["技术", "风险", "研发"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "前沿技术任务：考察不确定性表达与低置信度处理"
+  },
+  {
+    "id": "eval-013",
+    "topic": "白酒行业复苏",
+    "industry": "消费",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["消费", "风险"],
+      "direction_keywords": ["复苏", "回调", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "传统行业任务：考察周期反转判断"
+  },
+  {
+    "id": "eval-014",
+    "topic": "医药集采影响",
+    "industry": "生物医药",
+    "horizon": "短期(1-3个月)",
+    "expected": {
+      "must_mention": ["集采", "风险"],
+      "direction_keywords": ["降价", "风险", "政策"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "政策冲击任务：考察利空事件的冷静分析"
+  },
+  {
+    "id": "eval-015",
+    "topic": "光伏产业链价格战",
+    "industry": "新能源",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["产能", "风险"],
+      "direction_keywords": ["下跌", "出清", "风险"],
+      "min_tools_used": 2,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "行业下行任务：考察看空逻辑与数据校验（假设-数据矛盾应被惩罚）"
+  },
+  {
+    "id": "eval-016",
+    "topic": "AI大模型算力需求",
+    "industry": "人工智能",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["算力", "风险"],
+      "direction_keywords": ["增长", "需求", "风险"],
+      "min_tools_used": 2,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "算力基建任务：考察产业链上下游联动分析"
+  },
+  {
+    "id": "eval-017",
+    "topic": "银行板块高股息策略",
+    "industry": "金融",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["股息", "风险"],
+      "direction_keywords": ["稳健", "防御", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "防御型任务：考察稳健型方案的生成质量"
+  },
+  {
+    "id": "eval-018",
+    "topic": "军工行业景气度",
+    "industry": "航空航天",
+    "horizon": "中期(6-12个月)",
+    "expected": {
+      "must_mention": ["订单", "风险"],
+      "direction_keywords": ["增长", "景气", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "景气度任务：考察订单-业绩传导逻辑"
+  },
+  {
+    "id": "eval-019",
+    "topic": "游戏行业版号常态化",
+    "industry": "传媒娱乐",
+    "horizon": "短期(1-3个月)",
+    "expected": {
+      "must_mention": ["版号", "风险"],
+      "direction_keywords": ["政策", "回暖", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "政策回暖任务：考察事件驱动分析框架"
+  },
+  {
+    "id": "eval-020",
+    "topic": "数据要素市场建设",
+    "industry": "互联网",
+    "horizon": "长期(1-3年)",
+    "expected": {
+      "must_mention": ["数据", "风险"],
+      "direction_keywords": ["政策", "增长", "风险"],
+      "min_tools_used": 1,
+      "min_plans": 2,
+      "must_have_reflection": true,
+      "must_have_risk": true
+    },
+    "notes": "新兴制度主题：考察概念性主题的落地分析能力"
+  }
+]

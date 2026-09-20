@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.egg-info
+*.venv
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Data（仅忽略运行时产物，评测集等数据文件仍需入库）
+analysis_history.json
+data/*.json
+data/*.db
+data/checkpoints/
+data/traces/
+data/memory_store/
+
+# PDF
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# 个人求职文档（不入公开仓库，需要时可手动添加）
+/task/
+/优化流程计划书.md
+/简历优化_项目亮点与技术栈分析.md
+/面试回答_项目开发实施流程.md
+/部署方案_Docker_Compose.md

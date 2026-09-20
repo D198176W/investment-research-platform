@@ -1,0 +1,35 @@
+# 智能投研平台 - 完整依赖
+
+# FastAPI Gateway 依赖
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+httpx>=0.25.0
+python-multipart>=0.0.6
+
+# LangGraph and LangChain (Agent Service)
+langchain>=0.1.0
+langchain-community>=0.0.10
+langgraph>=0.0.10
+dashscope>=1.14.0
+
+# v2: Agent 工程能力升级
+openai>=1.40.0          # OpenAI 兼容协议统一接入（Function Calling / 多模型路由）
+mcp>=1.0.0              # MCP 协议（工具生态解耦）
+tiktoken>=0.7.0         # Token 精确计数（上下文窗口管理）
+numpy>=1.26.0           # 向量库（轻量，替代 Chroma 零依赖）
+
+# Report Service
+reportlab>=4.0.0
+
+# Streamlit Frontend
+streamlit>=1.28.0
+requests>=2.31.0
+
+# Shared
+asyncio-mqtt>=0.16.0
+
+# Data Fetcher (AKShare 实时数据源)
+akshare>=1.14.0

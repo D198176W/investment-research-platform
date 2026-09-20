@@ -1,0 +1,43 @@
+version: "3.9"
+
+# 智能投研平台 - 一键容器化部署
+# 用法:
+#   cp .env.example .env   # 填入 DASHSCOPE_API_KEY
+#   docker compose up -d --build
+# 访问:
+#   前端 http://localhost:8501   后端 http://localhost:8000/docs
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: irp-backend
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app/backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # 持久化：检查点/长期记忆/执行轨迹/历史记录（目录挂载，避免文件不存在时 Docker 误建同名目录）
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: irp-frontend
+    environment:
+      - API_BASE_URL=http://backend:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
