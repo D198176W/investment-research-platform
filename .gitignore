@@ -36,8 +36,8 @@ data/memory_store/
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/
+# Streamlit（config.toml 为浅色主题配置，随仓库分发）
+# .streamlit/
 
 # 个人求职文档（不入公开仓库，需要时可手动添加）
 /task/
